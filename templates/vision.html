@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Aeroclub IIST</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="/static/css/index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="/static/css/slider.css" rel="stylesheet">
+        <script src="/static/js/slider.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@700&&family=Oswald&display=swap" rel="stylesheet">
+        <link href="{% static 'img/favicon.png'%}" rel="icon">
+        <script src="https://kit.fontawesome.com/9dde0b24ee.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="maincontainer">
+            <div class="header" id="navmenu">
+                <img class="logo" src="/static/img/logo.png" alt="">
+                <div class="menu-button" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+            <div class="visionheading">
+                <div class="heading">
+                    High on Thrust
+                </div>
+                <div class="subheading">
+                    OUR VISION
+                </div>
+            </div>
+            <div class="visioncontainer">
+                <div class="bodytextvision">
+                    Aim of AeroClub is to create a space where awesome aerogeeks can come and transform their ideas into reality.
+                    <br>
+                    Its a place where people can come together work, bond and exploring neverending horizons in flight.
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footercolumn">
+                    <img class="footerlogo" src="/static/img/favicon.png">
+                    <div class="footerheading">
+                        Aeroclub
+                    </div>
+                </div>
+                <div class="footercolumn">
+                    <div class="footernav">
+                        <a href="/" onmouseenter="hover(this)" onmouseout="dehover(this)">Home</a>
+                    </div>
+                    <div class="footernav">
+                        <a href="/vision" onmouseenter="hover(this)" onmouseout="dehover(this)">Vision</a>
+                    </div>
+                    <div class="footernav">
+                        <a href="/pintu" onmouseenter="hover(this)" onmouseout="dehover(this)">Aircrafts</a>
+                    </div>
+                    <div class="footernav">
+                        <a href="/" onmouseenter="hover(this)" onmouseout="dehover(this)">Events</a>
+                    </div>
+                    <div class="footernav">
+                        <a href="/contact" onmouseenter="hover(this)" onmouseout="dehover(this)">Contact Us</a>
+                    </div>
+                </div>
+                <div class="footercolumn">
+                    <div class="footernav">
+                        <a href="/pintu" onmouseenter="hover(this)" onmouseout="dehover(this)">Pintu & Pintu Beta</a>
+                    </div>
+                    <div class="footernav">
+                        <a href="/" onmouseenter="hover(this)" onmouseout="dehover(this)">FT Legacy</a>
+                    </div>
+                    <div class="footernav">
+                        <a href="/" onmouseenter="hover(this)" onmouseout="dehover(this)">FT22 Raptor</a>
+                    </div>
+                    <div class="footernav">
+                        <a href="/" onmouseenter="hover(this)" onmouseout="dehover(this)">Gliders</a>
+                    </div>
+                    <div class="footernav">
+                        <a href="/" onmouseenter="hover(this)" onmouseout="dehover(this)">Conscientia 2k22</a>
+                    </div>
+                </div>
+                <div class="footercolumn">
+                    <div class="footernav">
+                        <a href="mailto:aeroclub@iist.ac.in?subject=Enquiry about Aeroclub" class="socialmediabuttons"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="#" class="socialmediabuttons"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/aeroclub_iist/" class="socialmediabuttons"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="socialmediabuttons"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <div class="footernav">
+                        <div class="footertext">
+                            Indian Institute of Space Science and Technology, Thiruvanthapuram <br>
+                            © Aeroclub, 2022 | Developed by Gaurav Gupta
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navmenu" id="menu">
+            <div class="menuheading">Menu</div>
+            <hr class="navseperator">
+            <div class="menuitem"><a href="/"> + Home</a></div>
+            <div class="menuitem"><a href="/vision"> + Vision</a></div>
+            <div class="menuitem" onclick="expandAircrafts(this)" id="aircrafttab"> + Aircrafts</div>
+            <div class="subnavmenu" id="aircraftsub">
+                <div class="submenuitem"><a href="/pintu">Pintu & Pintu Beta</a></div>
+                <div class="submenuitem"><a href="#">FT Legacy</a></div>
+                <div class="submenuitem"><a href="#">2020 Batch Aircraft</a></div>
+                <div class="submenuitem"><a href="#">FT22 Raptor</a></div>
+                <div class="submenuitem"><a href="#">Gliders</a></div>
+            </div>
+            <div class="menuitem" onclick="expandEvents(this)" id="eventtab"> + Events</div>
+            <div class="subnavmenu" id="eventssub">
+                <div class="submenuitem"><a href="#">2021 Batch Induction</a></div>
+                <div class="submenuitem"><a href="#">Introduction to OpenVSP</a></div>
+                <div class="submenuitem"><a href="#">Ponmudi School Session</a></div>
+                <div class="submenuitem"><a href="#">Workshop in Chinmaya Vidhayalay</a></div>
+            </div>
+            <div class="menuitem"><a href="/contact"> + Contact Us</a></div>
+        </div>
+        <script src="/static/js/index.js"></script>
+        <script>
+        function myFunction(x) {
+        x.classList.toggle("change");
+        if(document.getElementById("menu").style.display=="none" || document.getElementById("menu").style.display==""){
+        document.getElementById("menu").style.display="flex";
+        }else{
+        document.getElementById("menu").style.display="none";
+        }
+        
+        }
+        function expandAircrafts(x){
+        if(x.innerHTML == " + Aircrafts"){
+        if(document.getElementById("eventtab").innerHTML==" - Events"){
+        document.getElementById("eventtab").innerHTML = " + Events";
+        document.getElementById("eventssub").style.display="none";
+        x.innerHTML = " - Aircrafts";
+        document.getElementById("aircraftsub").style.display="flex";
+        }else{
+        x.innerHTML = " - Aircrafts";
+        document.getElementById("aircraftsub").style.display="flex";
+        }
+        
+        }else{
+        x.innerHTML = " + Aircrafts";
+        document.getElementById("aircraftsub").style.display="none";
+        }
+        }
+        function expandEvents(x){
+        if(x.innerHTML == " + Events"){
+        if(document.getElementById("aircrafttab").innerHTML==" - Aircrafts"){
+        document.getElementById("aircrafttab").innerHTML = " + Aircrafts";
+        document.getElementById("aircraftsub").style.display="none";
+        x.innerHTML = " - Events";
+        document.getElementById("eventssub").style.display="flex";
+        }else{
+        x.innerHTML = " - Events";
+        document.getElementById("eventssub").style.display="flex";
+        }
+        }else{
+        x.innerHTML = " + Events";
+        document.getElementById("eventssub").style.display="none";
+        }
+        }
+        $('#gallery').skdslider({
+        slideSelector: '.slide',
+        delay:5000,
+        animationSpeed: 2000,
+        showNextPrev:true,
+        showPlayButton:false,
+        autoSlide:true,
+        animationType:'sliding',
+        showNav:true,
+        pauseOnHover:false
+        });
+        function hover(x){
+        x.innerHTML = x.innerHTML + " >";
+        }
+        function dehover(x){
+        x.innerHTML = x.innerHTML.slice(0,x.innerHTML.length-4);
+        }
+        </script>
+    </body>
+</html>
